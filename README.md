@@ -37,5 +37,4 @@ Fibonet是一个轻量且高效的神经网络，用于图像分割。该网络�
 ## 引用
 
 如果您在研究中使用了Fibonet，请引用以下论文：
-
-Wu Ruohao. Fibonet: A Light-weight and Efficient Neural Network for Image Segmentation[C]//2023 IEEE International Conference on Image Processing(ICIP). Kuala Lumpur, Malaysia, October 8-11, 2023.
+Wu Ruohao. Fibonet: A Light-weight and Efficient Neural Network for Image Segmentation[C]//2023 IEEE International Conference on Image Processing(ICIP). Kuala Lumpur, Malaysia, October 8-11, 2023. 
