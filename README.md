@@ -1,5 +1,4 @@
-# Fibonet: A Light-weight and Efficient Neural Network for Image Segmentation
-
+# Fibonet: 一个用于图像分割的轻量且高效的神经网络
 ## 介绍
 
 Fibonet是一个轻量且高效的神经网络，用于图像分割。该网络采用了一种名为Fibonacci卷积的新型卷积操作，能够在保持高准确性的同时，大大减少网络参数和计算量。
