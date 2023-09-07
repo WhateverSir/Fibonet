@@ -54,9 +54,9 @@ if __name__ == '__main__':
     #stage2_cnn(input_channel=3, mid_channel=16, labels=3)#ResNet()#Densenet(input_channel=3, mid_channel=12, labels=1)#Fibo_Dense(input_channel=3, mid_channel=12, labels=1)#
     model.eval()
         #算力计算
-    # input = torch.randn(1, 3, 640, 360).to('cuda') #模型输入的形状,batch_size=1
-    # flops, params = profile(model, inputs=(input, ))
-    # print("Flops(G):",flops/1e9, "Parameters(M):",params/1e6) #flops单位G，para单位M
+    input = torch.randn(1, 3, 640, 360).to('cuda') #模型输入的形状,batch_size=1
+    flops, params = profile(model, inputs=(input, ))
+    print("Flops(G):",flops/1e9, "Parameters(M):",params/1e6) #flops单位G，para单位M
     iou_s,iou_m,iou_l=0,0,0
     num_s,num_m,num_l=0,0,0
     with open("D:/microlight/test.txt", "r") as f:
