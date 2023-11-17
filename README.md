@@ -15,7 +15,7 @@ Fibonet是一个轻量且高效的神经网络，用于图像分割。该网络�
 - `PSPnet.py`：PSPnet是一种具有多尺度池化的语义分割模型，该文件包含了PSPnet模型的实现代码。
 - `README.md`：本文件，提供了项目的介绍和使用说明。
 - `Unet_mobile.py`：Unet_mobile是一种轻量级的语义分割模型，该文件包含了Unet_mobile模型的实现代码。
-- `backbonds.py`：该文件包含了Fibonacci卷积操作的实现代码。
+- `backbonds.py`：该文件包含了骨干网络Resnet的实现代码。
 - `mobilenet.py`：MobileNet是一种轻量级的卷积神经网络，该文件包含了MobileNet模型的实现代码。
 - `model.py`：该文件包含了Fibonet模型的实现代码。
 - `shuffle_v2.py`：ShuffleNet V2是一种具有低计算复杂度和高准确性的卷积神经网络，该文件包含了骨干网络ShuffleNet/Shuffle-UNet的实现代码。
