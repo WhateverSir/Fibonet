@@ -19,7 +19,7 @@ Fibonet是一个用于图像分割的轻量且高效的神经网络。该网络�
 - `mobilenet.py`：MobileNet是一种轻量级的卷积神经网络，该文件包含了MobileNet模型的实现代码。
 - `model.py`：该文件包含了ResNet/WideDeep/DenseNet/Fibonet等模型的实现代码。
 - `shuffle_v2.py`：ShuffleNet V2是一种具有低计算复杂度和高准确性的卷积神经网络，该文件包含了骨干网络ShuffleNet/Shuffle-UNet的实现代码。
-- `test_miou.py`：该文件包含了计算图像分割平均IoU（Intersection over Union）的代码。
+- `test_miou.py`：该文件包含了对预测结果计算图像分割平均IoU（Intersection over Union）的代码。
 - `train.py`：该文件包含了训练Fibonet模型所需的代码。
 
 ## 使用
