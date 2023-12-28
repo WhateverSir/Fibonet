@@ -1,4 +1,3 @@
-from matplotlib.pyplot import xcorr
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -378,8 +377,7 @@ class Unet(nn.Module):
         self.layer7_conv = double_conv2d_bn(64,32)
         self.layer8_conv = double_conv2d_bn(32,16)
         self.layer9_conv = double_conv2d_bn(16,8)
-        self.layer10_conv = nn.Conv2d(8,3,kernel_size=3,
-                                     stride=1,padding=1,bias=True)
+        self.layer10_conv = nn.Conv2d(8,3,kernel_size=3, stride=1,padding=1,bias=True)
         
         self.deconv1 = deconv2d_bn(128,64)
         self.deconv2 = deconv2d_bn(64,32)
