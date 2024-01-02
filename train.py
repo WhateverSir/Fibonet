@@ -12,7 +12,7 @@ import torch.utils.data as data
 from model import my_cnn, stage2_cnn, ResNet, Wide_Deep, Fibo_Dense, Fibo_2, small, Unet, Densenet, Dense_Fibo
 from DeepLab import DeepLabV3Plus
 from PSPnet import PSPNet
-from shuffle_v2 import shufflenet_1x,shufflenet_1x_se_res
+from shuffle_v2 import shufflenet_1x,shufflenet_1x_se_res,shuffle_Unet
 from mobilenet import MobileNet,MobileNetV2
 from Unet_mobile import Mobile_UNet
 
