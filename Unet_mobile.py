@@ -27,55 +27,6 @@ def conv_dw(inp, oup, stride=1):
         nn.ReLU6(inplace=True),
     )
 
-
-class MobileNet(nn.Module):
-    def __init__(self, n_channels):
-        super(MobileNet, self).__init__()
-        self.layer1 = nn.Sequential(
-            # 第一个卷积块，步长为2，压缩一次
-            conv_bn(n_channels, 16, 2),  # 416,416,3 -> 208,208,16
-
-            # 第一个深度可分离卷积，步长为1
-            conv_dw(16, 32, 1),  # 208,208,16 -> 208,208,32
-
-            # 两个深度可分离卷积块
-            conv_dw(32, 32, 1),  # 208,208,32 -> 104,104,64
-            conv_dw(32, 32, 1),
-
-            # 104,104,64 -> 52,52,192
-            conv_dw(32, 32, 1),
-            conv_dw(32, 32, 1),
-        )
-        # 52,52,192 -> 26,26,512
-        self.layer2 = nn.Sequential(
-            conv_dw(32, 64, 2),
-            conv_dw(64, 64, 1),
-            conv_dw(64, 64, 1),
-            conv_dw(64, 64, 1),
-            conv_dw(64, 64, 1),
-            conv_dw(64, 64, 1),
-        )
-        # 26,26,512 -> 13,13,1024
-        self.layer3 = nn.Sequential(
-            conv_dw(64, 128, 2),
-            conv_dw(128, 128, 1),
-        )
-        self.avg = nn.AdaptiveAvgPool2d((1, 1))
-        self.fc = nn.Linear(1024, 1000)
-
-    def forward(self, x):
-        x = self.stage1(x)
-        x = self.stage2(x)
-        x = self.stage3(x)
-        x = self.avg(x)
-
-        x = x.view(-1, 1024)
-        x = self.fc(x)
-        return x
-
-import torch.nn as nn
-import torch
-
 class Down(nn.Module):
     """Downscaling with maxpool then double conv"""
 
