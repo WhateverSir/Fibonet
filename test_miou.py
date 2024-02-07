@@ -1,15 +1,10 @@
 import argparse
 import cv2
-import time
-import datetime
 import os
-import random
 import numpy as np
 import matplotlib.pylab as plt
-import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torch.utils.data as data
 from model import my_cnn, stage2_cnn, ResNet, Wide_Deep, Fibo_Dense, Fibo_2, small, Unet, Densenet, Dense_Fibo
 from DeepLab import DeepLabV3Plus
 from PSPnet import PSPNet
